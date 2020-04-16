@@ -2,6 +2,16 @@ var toDo = angular.module('toDo')
 
 .controller('ToDoCtrl', ['$scope', function($scope){
     
-    $scope.todos = ["do the laundry", "mop the floor", "finish two chapters from the book you are reading"
+    $scope.todos = [
+        {
+            task: 'do the laundry'
+        },
+        {
+            task: 'mop the floor'
+        },
+        {
+            task: 'read a book'
+        }
+
     ]
 }]);
