@@ -27,5 +27,9 @@ var toDo = angular.module('toDo')
         $scope.item = '';
     }
 
+    $scope.deleteItem = function($index) {
+        $scope.todos.splice($index,1);
+    }
+
 
 }])

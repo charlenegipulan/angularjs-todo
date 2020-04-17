@@ -1,13 +1,11 @@
 <h3>Quarantine Todo's:</h3>
 <div ng-controller="ToDoCtrl">
-    <a href="#/add">Add a new Todo</a>
-    <br>
     <hr>
-    Add a task
     <input type="text" ng-model="item" placeholder="Add a task">
     <button type="submit" ng-click="addTodo(item)">Add</button>
+    <hr>
     <div class="item" ng-repeat="todo in todos | filter:list">
         <h3>{{todo.task}}</h3>
-        <button ngClick="deleteItem"> X </button>
+        <button ng-click="deleteItem($index)"> X </button>
     </div>
 </div>
